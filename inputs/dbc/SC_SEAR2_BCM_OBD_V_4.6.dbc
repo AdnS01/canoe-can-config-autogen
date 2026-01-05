@@ -1,0 +1,552 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: DIAG_TOOL BCM
+
+
+BO_ 1423 DCDC_DIAG_RES_58Fh: 8 BCM
+ SG_ DATA_DIAG_RES_DCDC : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1424 DCDC_DIAG_REQ_590h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_DCDC : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1450 EPT_REP_DIAG_ON_CAN_5AA: 8 BCM
+ SG_ DATA_DIAG_RES_5AAh : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1455 AVAS_DIAG_RES_5AFh: 8 BCM
+ SG_ DATA_DIAG_RES_AVAS : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1456 AVAS_DIAG_REQ_5B0h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_AVAS : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1482 EPT_REQ_DIAG_ON_CAN_5CA: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_5CAh : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1604 AIRBAG_DIAG_RES_644h: 8 BCM
+ SG_ DATA_DIAG_RES_AIRBAG : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1610 IS_REP_DIAG_ON_CAN_64Ah: 8 BCM
+ SG_ DATA_DIAG_RES_MFCM : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1613 eTOGGLE_DIAG_RES_64Dh: 8 BCM
+ SG_ DATA_DIAG_RES_eTOGGLE : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1615 ESCL_DIAG_RES_64Fh: 8 BCM
+ SG_ DATA_DIAG_RES_ESCL : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1618 _652_BCM_DIAG_RES: 8 BCM
+ SG_ DATA_DIAG_RES_BCM : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1631 CLUSTER_DIAG_RES_65Fh: 8 BCM
+ SG_ DATA_DIAG_RES_CLUSTER : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1636 IVI_SPS_DIAG_RES_664h: 8 BCM
+ SG_ DATA_DIAG_RES_IVI : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1644 HS5_REP_DIAG_TIM: 8 BCM
+ SG_ DATA_DIAG_RES_TIM_66Ch : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1659 FATC_DIAG_RES_67Bh: 8 BCM
+ SG_ DATA_DIAG_RES_FATC : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1663 HS3_REP_DIAG_BSRF: 8 BCM
+ SG_ DATA_DIAG_RES_BSRF : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1665 IS_REQ_DIAG_ON_CAN_681h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_681h : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1666 VCU_DIAG_RES_682h: 8 BCM
+ SG_ DATA_DIAG_RES_VCU : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1670 INV_DIAG_RES_686h: 8 BCM
+ SG_ DATA_DIAG_RES_INV : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1672 ECM_DIAG_RES_688h: 8 BCM
+ SG_ DATA_DIAG_RES_ECM : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1673 TCU_DIAG_RES_689h: 8 BCM
+ SG_ DATA_DIAG_RES_TCU : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1677 ESP_DIAG_RES_68Dh: 8 BCM
+ SG_ DATA_DIAG_RES_ESP : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1684 TBMU_HVBAT_DIAG_RES_694h: 8 BCM
+ SG_ DATA_DIAG_RES_TBMU_HVBAT : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1685 EPS_DIAG_RES_695h: 8 BCM
+ SG_ DATA_DIAG_RES_EPS : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1690 REP_DIAG_ON_CAN_69A: 8 BCM
+ SG_ DATA_DIAG_RES_69Ah : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1691 BDSGS_DIAG_RES_69Bh: 8 BCM
+ SG_ DATA_DIAG_RES_BDSGS : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1698 VCU_DIAG_REQ_6A2h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_VCU : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1702 INV_DIAG_REQ_6A6h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_INV : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1704 ECM_DIAG_REQ_6A8h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_ECM : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1705 TCU_DIAG_REQ_6A9h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_TCU : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1709 ESP_DIAG_REQ_6ADh: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_ESP : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1716 TBMU_HVBAT_DIAG_REQ_6B4h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_TBMU_HVBAT : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1717 EPS_DIAG_REQ_6B5h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_EPS : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1722 REQ_DIAG_ON_CAN_6BA: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_6BAh : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1723 BDSGS_DIAG_REQ_6BBh: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_BDSGS : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1808 LIN_DIAG_RES_710h: 8 BCM
+ SG_ DATA_DIAG_RES : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1811 HCM_DIAG_RES_713h: 8 BCM
+ SG_ DATA_DIAG_RES_HCM : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1812 LIN_DIAG_RES_714h: 8 BCM
+ SG_ DATA_DIAG_RES : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1815 EXV_LIN_DIAG_RES_717h: 8 BCM
+ SG_ DATA_DIAG_RES_EXV : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1840 LIN_DIAG_REQ_730h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1843 HCM_DIAG_REQ_733h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_HCM : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1844 LIN_DIAG_REQ_734h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1847 EXV_LIN_DIAG_REQ_737h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_EXV : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1860 AIRBAG_DIAG_REQ_744h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_AIRBAG : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1866 MFCM_DIAG_REQ_74Ah: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_MFCM : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1869 eTOGGLE_DIAG_REQ_74Dh: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_eTOGGLE : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1871 ESCL_DIAG_REQ_74Fh: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_ESCL : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1874 _752_BCM_DIAG_REQ: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_BCM : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1887 CLUSTER_DIAG_REQ_75Fh: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_CLUSTER : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1892 IVI_SPS_DIAG_REQ_764h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_IVI : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1900 HS5_REQ_DIAG_TIM: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_TIM_76Ch : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1915 FATC_DIAG_REQ_77Bh: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_FATC : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1919 HS3_REQ_DIAG_BSRF: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_BSRF : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1921 IS_REP_DIAG_ON_CAN_781h: 8 BCM
+ SG_ DATA_DIAG_RES_781h : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1966 IS_DIAG_XCP_ON_CAN_7AEh: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_7AEh : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1968 IS_DIAG_XCP_ON_CAN_7B0h: 8 BCM
+ SG_ DATA_DIAG_RES_7B0h : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 2015 IS_REQ_DIAG_ON_CAN_7DFh: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_7DFh : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 2017 REQ_EOBD_ON_CAN_7E1: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_7E1h : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 2025 RES_EOBD_ON_CAN_7E9: 8 BCM
+ SG_ DATA_DIAG_RES_7E9h : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 2032 AIRBAG_EDR_DIAG_REQ_7F0h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_AIRBAG_EDR : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 2041 IS_REP_DIAG_ON_CAN_7F9h: 8 BCM
+ SG_ DATA_DIAG_RES_7F9h : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 2040 AIRBAG_EDR_DIAG_RES_7F8h: 8 BCM
+ SG_ DATA_DIAG_RES_AIRBAG_EDR : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 2033 IS_REQ_DIAG_ON_CAN_7F1h: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_7F1h : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 2047 IS_DIAG_UDS_ON_CAN_7FFh: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_7FFh : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 1614 HS3_REP_DIAG_IVC_D: 8 BCM
+ SG_ DATA_DIAG_REP_DMS : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 1870 HS3_REQ_DIAG_IVC_D: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_DMS : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+BO_ 2024 REP_EOBD_ON_CAN_7E8: 8 BCM
+ SG_ DATA_DIAG_RES_7E8h : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  DIAG_TOOL
+
+BO_ 2016 REQ_EOBD_ON_CAN_7E0: 8 DIAG_TOOL
+ SG_ DATA_DIAG_REQ_7E0h : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BCM
+
+
+
+BA_DEF_ SG_  "GenSigStartValue" HEX 0 0;
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BO_  "Periode" INT 0 0;
+BA_DEF_ BO_  "ModeTransmission" ENUM  "P","E","P+E";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Spontaneous","IfActive","NoMsgSendType","not_used","Mixte";
+BA_DEF_ BO_  "Owner" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ILUsed" ENUM  "Yes","No";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "Periode" 100;
+BA_DEF_DEF_  "ModeTransmission" "P";
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "Owner" "PSA-IVN";
+BA_DEF_DEF_  "NodeLayerModules" "CANoeILNLVector.dll";
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "DBName" "RM";
+BA_ "BusType" "CAN";
+BA_ "DBName" "OBD_CAN";
+BA_ "DiagResponse" BO_ 1423 1;
+BA_ "GenMsgSendType" BO_ 1423 1;
+BA_ "ModeTransmission" BO_ 1423 1;
+BA_ "Periode" BO_ 1423 0;
+BA_ "DiagRequest" BO_ 1424 1;
+BA_ "GenMsgSendType" BO_ 1424 1;
+BA_ "ModeTransmission" BO_ 1424 1;
+BA_ "Periode" BO_ 1424 0;
+BA_ "DiagResponse" BO_ 1450 1;
+BA_ "GenMsgSendType" BO_ 1450 1;
+BA_ "ModeTransmission" BO_ 1450 1;
+BA_ "Periode" BO_ 1450 0;
+BA_ "DiagResponse" BO_ 1455 1;
+BA_ "GenMsgSendType" BO_ 1455 1;
+BA_ "ModeTransmission" BO_ 1455 1;
+BA_ "Periode" BO_ 1455 0;
+BA_ "DiagRequest" BO_ 1456 1;
+BA_ "GenMsgSendType" BO_ 1456 1;
+BA_ "ModeTransmission" BO_ 1456 1;
+BA_ "Periode" BO_ 1456 0;
+BA_ "DiagRequest" BO_ 1482 1;
+BA_ "GenMsgSendType" BO_ 1482 1;
+BA_ "ModeTransmission" BO_ 1482 1;
+BA_ "Periode" BO_ 1482 0;
+BA_ "DiagResponse" BO_ 1604 1;
+BA_ "GenMsgSendType" BO_ 1604 1;
+BA_ "ModeTransmission" BO_ 1604 1;
+BA_ "Periode" BO_ 1604 0;
+BA_ "DiagResponse" BO_ 1610 1;
+BA_ "GenMsgSendType" BO_ 1610 1;
+BA_ "ModeTransmission" BO_ 1610 1;
+BA_ "Periode" BO_ 1610 0;
+BA_ "DiagResponse" BO_ 1613 1;
+BA_ "GenMsgSendType" BO_ 1613 1;
+BA_ "ModeTransmission" BO_ 1613 1;
+BA_ "Periode" BO_ 1613 0;
+BA_ "DiagResponse" BO_ 1615 1;
+BA_ "GenMsgSendType" BO_ 1615 1;
+BA_ "ModeTransmission" BO_ 1615 1;
+BA_ "Periode" BO_ 1615 0;
+BA_ "DiagResponse" BO_ 1618 1;
+BA_ "GenMsgSendType" BO_ 1618 1;
+BA_ "ModeTransmission" BO_ 1618 1;
+BA_ "Periode" BO_ 1618 0;
+BA_ "DiagResponse" BO_ 1631 1;
+BA_ "GenMsgSendType" BO_ 1631 1;
+BA_ "ModeTransmission" BO_ 1631 1;
+BA_ "Periode" BO_ 1631 0;
+BA_ "DiagResponse" BO_ 1636 1;
+BA_ "GenMsgSendType" BO_ 1636 1;
+BA_ "ModeTransmission" BO_ 1636 1;
+BA_ "Periode" BO_ 1636 0;
+BA_ "DiagResponse" BO_ 1644 1;
+BA_ "GenMsgSendType" BO_ 1644 1;
+BA_ "ModeTransmission" BO_ 1644 1;
+BA_ "Periode" BO_ 1644 0;
+BA_ "DiagResponse" BO_ 1659 1;
+BA_ "GenMsgSendType" BO_ 1659 1;
+BA_ "ModeTransmission" BO_ 1659 1;
+BA_ "Periode" BO_ 1659 0;
+BA_ "DiagResponse" BO_ 1663 1;
+BA_ "GenMsgSendType" BO_ 1663 1;
+BA_ "ModeTransmission" BO_ 1663 1;
+BA_ "Periode" BO_ 1663 0;
+BA_ "DiagRequest" BO_ 1665 1;
+BA_ "GenMsgSendType" BO_ 1665 1;
+BA_ "ModeTransmission" BO_ 1665 1;
+BA_ "Periode" BO_ 1665 0;
+BA_ "DiagResponse" BO_ 1666 1;
+BA_ "GenMsgSendType" BO_ 1666 1;
+BA_ "ModeTransmission" BO_ 1666 1;
+BA_ "Periode" BO_ 1666 0;
+BA_ "DiagResponse" BO_ 1670 1;
+BA_ "GenMsgSendType" BO_ 1670 1;
+BA_ "ModeTransmission" BO_ 1670 1;
+BA_ "Periode" BO_ 1670 0;
+BA_ "DiagResponse" BO_ 1672 1;
+BA_ "GenMsgSendType" BO_ 1672 1;
+BA_ "ModeTransmission" BO_ 1672 1;
+BA_ "Periode" BO_ 1672 0;
+BA_ "DiagResponse" BO_ 1673 1;
+BA_ "GenMsgSendType" BO_ 1673 1;
+BA_ "ModeTransmission" BO_ 1673 1;
+BA_ "Periode" BO_ 1673 0;
+BA_ "DiagResponse" BO_ 1677 1;
+BA_ "GenMsgSendType" BO_ 1677 1;
+BA_ "ModeTransmission" BO_ 1677 1;
+BA_ "Periode" BO_ 1677 0;
+BA_ "DiagResponse" BO_ 1684 1;
+BA_ "GenMsgSendType" BO_ 1684 1;
+BA_ "ModeTransmission" BO_ 1684 1;
+BA_ "Periode" BO_ 1684 0;
+BA_ "DiagResponse" BO_ 1685 1;
+BA_ "GenMsgSendType" BO_ 1685 1;
+BA_ "ModeTransmission" BO_ 1685 1;
+BA_ "Periode" BO_ 1685 0;
+BA_ "DiagResponse" BO_ 1690 1;
+BA_ "GenMsgSendType" BO_ 1690 1;
+BA_ "ModeTransmission" BO_ 1690 1;
+BA_ "Periode" BO_ 1690 0;
+BA_ "DiagResponse" BO_ 1691 1;
+BA_ "GenMsgSendType" BO_ 1691 1;
+BA_ "ModeTransmission" BO_ 1691 1;
+BA_ "Periode" BO_ 1691 0;
+BA_ "DiagRequest" BO_ 1698 1;
+BA_ "GenMsgSendType" BO_ 1698 1;
+BA_ "ModeTransmission" BO_ 1698 1;
+BA_ "Periode" BO_ 1698 0;
+BA_ "DiagRequest" BO_ 1702 1;
+BA_ "GenMsgSendType" BO_ 1702 1;
+BA_ "ModeTransmission" BO_ 1702 1;
+BA_ "Periode" BO_ 1702 0;
+BA_ "DiagRequest" BO_ 1704 1;
+BA_ "GenMsgSendType" BO_ 1704 1;
+BA_ "ModeTransmission" BO_ 1704 1;
+BA_ "Periode" BO_ 1704 0;
+BA_ "DiagRequest" BO_ 1705 1;
+BA_ "GenMsgSendType" BO_ 1705 1;
+BA_ "ModeTransmission" BO_ 1705 1;
+BA_ "Periode" BO_ 1705 0;
+BA_ "DiagRequest" BO_ 1709 1;
+BA_ "GenMsgSendType" BO_ 1709 1;
+BA_ "ModeTransmission" BO_ 1709 1;
+BA_ "Periode" BO_ 1709 0;
+BA_ "DiagRequest" BO_ 1716 1;
+BA_ "GenMsgSendType" BO_ 1716 1;
+BA_ "ModeTransmission" BO_ 1716 1;
+BA_ "Periode" BO_ 1716 0;
+BA_ "DiagRequest" BO_ 1717 1;
+BA_ "GenMsgSendType" BO_ 1717 1;
+BA_ "ModeTransmission" BO_ 1717 1;
+BA_ "Periode" BO_ 1717 0;
+BA_ "DiagRequest" BO_ 1722 1;
+BA_ "GenMsgSendType" BO_ 1722 1;
+BA_ "ModeTransmission" BO_ 1722 1;
+BA_ "Periode" BO_ 1722 0;
+BA_ "DiagRequest" BO_ 1723 1;
+BA_ "GenMsgSendType" BO_ 1723 1;
+BA_ "ModeTransmission" BO_ 1723 1;
+BA_ "Periode" BO_ 1723 0;
+BA_ "DiagResponse" BO_ 1808 1;
+BA_ "GenMsgSendType" BO_ 1808 1;
+BA_ "ModeTransmission" BO_ 1808 1;
+BA_ "Periode" BO_ 1808 0;
+BA_ "DiagResponse" BO_ 1811 1;
+BA_ "GenMsgSendType" BO_ 1811 1;
+BA_ "ModeTransmission" BO_ 1811 1;
+BA_ "Periode" BO_ 1811 0;
+BA_ "DiagResponse" BO_ 1812 1;
+BA_ "GenMsgSendType" BO_ 1812 1;
+BA_ "ModeTransmission" BO_ 1812 1;
+BA_ "Periode" BO_ 1812 0;
+BA_ "DiagResponse" BO_ 1815 1;
+BA_ "GenMsgSendType" BO_ 1815 1;
+BA_ "ModeTransmission" BO_ 1815 1;
+BA_ "Periode" BO_ 1815 0;
+BA_ "DiagRequest" BO_ 1840 1;
+BA_ "GenMsgSendType" BO_ 1840 1;
+BA_ "ModeTransmission" BO_ 1840 1;
+BA_ "Periode" BO_ 1840 0;
+BA_ "DiagRequest" BO_ 1843 1;
+BA_ "GenMsgSendType" BO_ 1843 1;
+BA_ "ModeTransmission" BO_ 1843 1;
+BA_ "Periode" BO_ 1843 0;
+BA_ "DiagRequest" BO_ 1844 1;
+BA_ "GenMsgSendType" BO_ 1844 1;
+BA_ "ModeTransmission" BO_ 1844 1;
+BA_ "Periode" BO_ 1844 0;
+BA_ "DiagRequest" BO_ 1847 1;
+BA_ "GenMsgSendType" BO_ 1847 1;
+BA_ "ModeTransmission" BO_ 1847 1;
+BA_ "Periode" BO_ 1847 0;
+BA_ "DiagRequest" BO_ 1860 1;
+BA_ "GenMsgSendType" BO_ 1860 1;
+BA_ "ModeTransmission" BO_ 1860 1;
+BA_ "Periode" BO_ 1860 0;
+BA_ "DiagRequest" BO_ 1866 1;
+BA_ "GenMsgSendType" BO_ 1866 1;
+BA_ "ModeTransmission" BO_ 1866 1;
+BA_ "Periode" BO_ 1866 0;
+BA_ "DiagRequest" BO_ 1869 1;
+BA_ "GenMsgSendType" BO_ 1869 1;
+BA_ "ModeTransmission" BO_ 1869 1;
+BA_ "Periode" BO_ 1869 0;
+BA_ "DiagRequest" BO_ 1871 1;
+BA_ "GenMsgSendType" BO_ 1871 1;
+BA_ "ModeTransmission" BO_ 1871 1;
+BA_ "Periode" BO_ 1871 0;
+BA_ "DiagRequest" BO_ 1874 1;
+BA_ "GenMsgSendType" BO_ 1874 1;
+BA_ "ModeTransmission" BO_ 1874 1;
+BA_ "Periode" BO_ 1874 0;
+BA_ "DiagRequest" BO_ 1887 1;
+BA_ "GenMsgSendType" BO_ 1887 1;
+BA_ "ModeTransmission" BO_ 1887 1;
+BA_ "Periode" BO_ 1887 0;
+BA_ "DiagRequest" BO_ 1892 1;
+BA_ "GenMsgSendType" BO_ 1892 1;
+BA_ "ModeTransmission" BO_ 1892 1;
+BA_ "Periode" BO_ 1892 0;
+BA_ "DiagRequest" BO_ 1900 1;
+BA_ "GenMsgSendType" BO_ 1900 1;
+BA_ "ModeTransmission" BO_ 1900 1;
+BA_ "Periode" BO_ 1900 0;
+BA_ "DiagRequest" BO_ 1915 1;
+BA_ "GenMsgSendType" BO_ 1915 1;
+BA_ "ModeTransmission" BO_ 1915 1;
+BA_ "Periode" BO_ 1915 0;
+BA_ "DiagRequest" BO_ 1919 1;
+BA_ "GenMsgSendType" BO_ 1919 1;
+BA_ "ModeTransmission" BO_ 1919 1;
+BA_ "Periode" BO_ 1919 0;
+BA_ "DiagResponse" BO_ 1921 1;
+BA_ "GenMsgSendType" BO_ 1921 1;
+BA_ "ModeTransmission" BO_ 1921 1;
+BA_ "Periode" BO_ 1921 0;
+BA_ "DiagRequest" BO_ 1966 1;
+BA_ "GenMsgSendType" BO_ 1966 1;
+BA_ "ModeTransmission" BO_ 1966 1;
+BA_ "Periode" BO_ 1966 0;
+BA_ "DiagResponse" BO_ 1968 1;
+BA_ "GenMsgSendType" BO_ 1968 1;
+BA_ "ModeTransmission" BO_ 1968 1;
+BA_ "Periode" BO_ 1968 0;
+BA_ "DiagRequest" BO_ 2015 1;
+BA_ "GenMsgSendType" BO_ 2015 1;
+BA_ "ModeTransmission" BO_ 2015 1;
+BA_ "Periode" BO_ 2015 0;
+BA_ "DiagRequest" BO_ 2017 1;
+BA_ "GenMsgSendType" BO_ 2017 1;
+BA_ "ModeTransmission" BO_ 2017 1;
+BA_ "Periode" BO_ 2017 0;
+BA_ "DiagResponse" BO_ 2025 1;
+BA_ "GenMsgSendType" BO_ 2025 1;
+BA_ "ModeTransmission" BO_ 2025 1;
+BA_ "Periode" BO_ 2025 0;
+BA_ "DiagRequest" BO_ 2032 1;
+BA_ "GenMsgSendType" BO_ 2032 1;
+BA_ "ModeTransmission" BO_ 2032 1;
+BA_ "Periode" BO_ 2032 0;
+BA_ "DiagResponse" BO_ 2041 1;
+BA_ "GenMsgSendType" BO_ 2041 1;
+BA_ "ModeTransmission" BO_ 2041 1;
+BA_ "Periode" BO_ 2041 0;
+BA_ "DiagResponse" BO_ 2040 1;
+BA_ "GenMsgSendType" BO_ 2040 1;
+BA_ "ModeTransmission" BO_ 2040 1;
+BA_ "Periode" BO_ 2040 0;
+BA_ "DiagRequest" BO_ 2033 1;
+BA_ "GenMsgSendType" BO_ 2033 1;
+BA_ "ModeTransmission" BO_ 2033 1;
+BA_ "Periode" BO_ 2033 0;
+BA_ "DiagRequest" BO_ 2047 1;
+BA_ "DiagState" BO_ 2047 1;
+BA_ "GenMsgSendType" BO_ 2047 1;
+BA_ "ModeTransmission" BO_ 2047 1;
+BA_ "Periode" BO_ 2047 0;
+BA_ "DiagResponse" BO_ 1614 1;
+BA_ "GenMsgSendType" BO_ 1614 1;
+BA_ "ModeTransmission" BO_ 1614 1;
+BA_ "Periode" BO_ 1614 0;
+BA_ "DiagRequest" BO_ 1870 1;
+BA_ "GenMsgSendType" BO_ 1870 1;
+BA_ "ModeTransmission" BO_ 1870 1;
+BA_ "Periode" BO_ 1870 0;
+BA_ "DiagResponse" BO_ 2024 1;
+BA_ "GenMsgSendType" BO_ 2024 1;
+BA_ "ModeTransmission" BO_ 2024 1;
+BA_ "Periode" BO_ 2024 0;
+BA_ "DiagRequest" BO_ 2016 1;
+BA_ "GenMsgSendType" BO_ 2016 1;
+BA_ "ModeTransmission" BO_ 2016 1;
+BA_ "Periode" BO_ 2016 0;
+
