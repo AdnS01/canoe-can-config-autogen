@@ -1,0 +1,1590 @@
+
+
+LIN_description_file;
+LIN_protocol_version = "2.1";
+LIN_language_version = "2.1";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: BCM, 5 ms, 0.1 ms ;
+  Slaves: BECB, CSM, RSBR, FPAS ;
+}
+
+Signals {
+  UBATT: 14, 16383, BECB, BCM ;
+  CALIBRE_IBATT: 2, 3, BECB, BCM ;
+  IBATT: 16, 65535, BECB, BCM ;
+  TBATT: 8, 255, BECB, BCM ;
+  I_VEILLE_MINI: 8, 253, BECB, BCM ;
+  VALEUR_SOC_ETENDUE: 10, 1022, BECB, BCM ;
+  BAT_U_MIN: 10, 1022, BECB, BCM ;
+  BAT_RINT_NORM: 7, 126, BECB, BCM ;
+  COMPTEUR_TENTATIVE_REVEIL: 4, 0, BECB, BCM ;
+  BAT_RINT_LOW_CUR_ST: 2, 1, BECB, BCM ;
+  BAT_I_MAX_LOW_CURRENT: 6, 62, BECB, BCM ;
+  TBATT_FAULT: 3, 0, BECB, BCM ;
+  STATUS_TBATT: 2, 3, BECB, BCM ;
+  SOC_ERROR: 4, 15, BECB, BCM ;
+  CHCKSUM_IBS_FRAME_1: 4, 0, BECB, BCM ;
+  CPT_PROCESS_IBS_FRAME_1: 4, 0, BECB, BCM ;
+  U_PRED_REDEMARRAGE: 11, 2046, BECB, BCM ;
+  STATUS_SOC: 2, 3, BECB, BCM ;
+  SOH_STATUS: 2, 3, BECB, BCM ;
+  LIN_ERROR_FLAG: 1, 0, BECB, BCM ;
+  BAT_RES_INT_ESTIM: 10, 1022, BECB, BCM ;
+  UBATT_FAULT: 3, 0, BECB, BCM ;
+  BAT_SOH: 7, 127, BECB, BCM ;
+  IBATT_FAULT: 3, 0, BECB, BCM ;
+  IBS_GENERIC_FAULT: 5, 0, BECB, BCM ;
+  CHCKSUM_IBS_FRAME_3: 4, 0, BECB, BCM ;
+  CPT_PROCESS_IBS_FRAME_3: 4, 0, BECB, BCM ;
+  BAT_RINT_RIPPLE: 8, 254, BECB, BCM ;
+  SOF_SAFETY: 8, 254, BECB, BCM ;
+  BAT_I_MAX: 6, 62, BECB, BCM ;
+  BAT_RINT_LOW_CUR: 7, 126, BECB, BCM ;
+  BAT_U_MIN_LOW_CURRENT: 5, 30, BECB, BCM ;
+  BAT_RINT_RIPPLE_ST: 2, 3, BECB, BCM ;
+  SOF_SAFETY_ST: 2, 3, BECB, BCM ;
+  BAT_AH_COUNTER: 9, 510, BECB, BCM ;
+  E_VALEUR_SEUIL: 1, 0, BECB, BCM ;
+  CSM_AUTO_PARK_LOW_BEAM: 3, 0, CSM, BCM ;
+  CSM_HIGH_PASS_BEAM: 3, 0, CSM, BCM ;
+  CSM_MIST_STATUS: 2, 0, CSM, BCM ;
+  CSM_TURN_INDICATOR_LANE_CHANGE_STATUS: 4, 0, CSM, BCM ;
+  CSM_FOG_FRONT_REAR_STATUS: 3, 0, CSM, BCM ;
+  CSM_FRONT_WIPER_STATUS: 4, 0, CSM, BCM ;
+  CSM_REAR_WIPER_WASHER_STATUS: 3, 0, CSM, BCM ;
+  CSM_FRONT_WASHER_STATUS: 2, 0, CSM, BCM ;
+  CSM_RIGHT_TRIP_SWITCH: 2, 0, CSM, BCM ;
+  CSM_MCU_Faults: 4, 0, CSM, BCM ;
+  E_CSM_PARK_LAMP_REQUEST: 1, 0, CSM, BCM ;
+  CSM_BCM_PDEF_NUM: 40, {0, 0, 0, 0, 0}, CSM, BCM ;
+  CSM_BCM_ECU_MFD_DAY: 8, 0, CSM, BCM ;
+  CSM_BCM_PREAL_NUM: 40, {0, 0, 0, 0, 0}, CSM, BCM ;
+  CSM_BCM_SUP_CODE: 16, 0, CSM, BCM ;
+  CSM_BCM_SRL_NUM_1: 64, {0, 0, 0, 0, 0, 0, 0, 0}, CSM, BCM ;
+  VEHICLE_SPEED: 16, 65535, BCM, FPAS ;
+  TM_GEAR_POSITION: 1, 0, BCM, FPAS ;
+  WIPER_STATUS: 2, 0, BCM, FPAS ;
+  VEHICLE_SPEED_VALIDITY: 2, 0, BCM, FPAS ;
+  AMBIENT_TEMP: 8, 252, BCM, FPAS ;
+  FRONT_LEFT_SENSOR_STATUS: 1, 0, FPAS, BCM ;
+  FRONT_LEFT_MIDDLE_SENSOR_STATUS: 1, 0, FPAS, BCM ;
+  FRONT_RIGHT_MIDDLE_SENSOR_STATUS: 1, 0, FPAS, BCM ;
+  FRONT_RIGHT_SENSOR_STATUS: 1, 0, FPAS, BCM ;
+  FPAS_FL_DETECT_INFO: 3, 0, FPAS, BCM ;
+  FPAS_FLM_DETECT_INFO: 3, 0, FPAS, BCM ;
+  FPAS_FRM_DETECT_INFO: 3, 0, FPAS, BCM ;
+  FPAS_FR_DETECT_INFO: 3, 0, FPAS, BCM ;
+  FPAS_OBJECT_DIST: 8, 255, FPAS, BCM ;
+  FPAS_ACTIVATION_STATUS: 2, 0, FPAS, BCM ;
+  IHM_INHIB: 2, 2, RSBR, BCM ;
+  RESP_ERROR_BMF: 1, 0, RSBR, BCM ;
+  ABPI: 1, 0, BCM, RSBR ;
+  OUCC: 1, 0, BCM, RSBR ;
+  OUCC_CLIG: 1, 0, BCM, RSBR ;
+  OUCP: 1, 0, BCM, RSBR ;
+  OUCP_CLIG: 1, 0, BCM, RSBR ;
+  OUCARG1: 1, 0, BCM, RSBR ;
+  OUCARG1_CLIG: 1, 0, BCM, RSBR ;
+  OUCARM1: 1, 0, BCM, RSBR ;
+  OUCARM1_CLIG: 1, 0, BCM, RSBR ;
+  OUCARD1: 1, 0, BCM, RSBR ;
+  OUCARD1_CLIG: 1, 0, BCM, RSBR ;
+  OUCARG2: 1, 0, BCM, RSBR ;
+  OUCARG2_CLIG: 1, 0, BCM, RSBR ;
+  OUCARD2: 1, 0, BCM, RSBR ;
+  OUCARD2_CLIG: 1, 0, BCM, RSBR ;
+  ETAT_JN: 1, 0, BCM, RSBR ;
+  TYPE_DIR: 2, 0, BCM, RSBR ;
+  OUCAVM: 1, 0, BCM, RSBR ;
+  OUCAVM_CLIG: 1, 0, BCM, RSBR ;
+  ACT_RBG_PASS: 1, 0, BCM, RSBR ;
+  TYPE_CLIGNOT_TEM_INHIB: 1, 0, BCM, RSBR ;
+  CDE_PV_LIN: 8, 1, BCM, CSM ;
+  CSM_CHKSUM: 4, 0, CSM, BCM ;
+  CSM_PROCESS_COUNTER: 4, 0, CSM, BCM ;
+  CSM_BCM_ECU_MFD_MONTH: 8, 0, CSM, BCM ;
+  CSM_BCM_ECU_MFD_YEAR: 8, 0, CSM, BCM ;
+  CSM_BCM_SRL_NUM_2: 64, {0, 0, 0, 0, 0, 0, 0, 0}, CSM, BCM ;
+  CSM_BCM_SRL_NUM_3: 32, {0, 0, 0, 0}, CSM, BCM ;
+  CSM_RESPONSE_ERROR: 1, 0, CSM, BCM ;
+  FPAS_ALARM_LEVEL: 3, 0, FPAS, BCM ;
+  FPAS_CAL_STATUS: 2, 0, FPAS, BCM ;
+  FPAS_VEH_TYPE: 4, 0, BCM, FPAS ;
+  FPAS_RESP_ERROR: 1, 0, FPAS, BCM ;
+  INFO_COM_OFF: 1, 0, BCM, FPAS ;
+  INTERD_MEMO_DEF: 1, 0, BCM, FPAS ;
+  DEM_EFFAC_DEF: 1, 0, BCM, FPAS ;
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  IBS_FRAME_1: 32, BECB, 8 {
+    UBATT, 0 ;
+    CALIBRE_IBATT, 14 ;
+    IBATT, 16 ;
+    TBATT, 32 ;
+    TBATT_FAULT, 40 ;
+    STATUS_TBATT, 43 ;
+    SOC_ERROR, 48 ;
+    CHCKSUM_IBS_FRAME_1, 56 ;
+    CPT_PROCESS_IBS_FRAME_1, 60 ;
+  }
+  IBS_FRAME_2: 33, BECB, 8 {
+    U_PRED_REDEMARRAGE, 0 ;
+    STATUS_SOC, 11 ;
+    SOH_STATUS, 13 ;
+    LIN_ERROR_FLAG, 15 ;
+    BAT_RES_INT_ESTIM, 16 ;
+    VALEUR_SOC_ETENDUE, 26 ;
+    UBATT_FAULT, 36 ;
+    I_VEILLE_MINI, 39 ;
+    BAT_SOH, 48 ;
+    IBATT_FAULT, 56 ;
+    IBS_GENERIC_FAULT, 59 ;
+  }
+  IBS_FRAME_3: 34, BECB, 8 {
+    CHCKSUM_IBS_FRAME_3, 0 ;
+    CPT_PROCESS_IBS_FRAME_3, 4 ;
+    BAT_RINT_RIPPLE, 8 ;
+    BAT_U_MIN, 16 ;
+    BAT_I_MAX_LOW_CURRENT, 26 ;
+    SOF_SAFETY, 32 ;
+    BAT_I_MAX, 40 ;
+    BAT_RINT_LOW_CUR_ST, 46 ;
+    BAT_RINT_LOW_CUR, 48 ;
+    BAT_U_MIN_LOW_CURRENT, 55 ;
+    BAT_RINT_RIPPLE_ST, 60 ;
+    SOF_SAFETY_ST, 62 ;
+  }
+  IBS_FRAME_4: 35, BECB, 2 {
+    BAT_AH_COUNTER, 0 ;
+    BAT_RINT_NORM, 9 ;
+  }
+  WAKE_UP_REQUEST: 29, BECB, 2 {
+    E_VALEUR_SEUIL, 0 ;
+    COMPTEUR_TENTATIVE_REVEIL, 8 ;
+  }
+  CSM_REQ_1Fh: 31, CSM, 8 {
+    CSM_AUTO_PARK_LOW_BEAM, 0 ;
+    CSM_HIGH_PASS_BEAM, 3 ;
+    CSM_MIST_STATUS, 6 ;
+    CSM_TURN_INDICATOR_LANE_CHANGE_STATUS, 8 ;
+    CSM_FOG_FRONT_REAR_STATUS, 12 ;
+    CSM_FRONT_WIPER_STATUS, 16 ;
+    CSM_REAR_WIPER_WASHER_STATUS, 20 ;
+    CSM_FRONT_WASHER_STATUS, 24 ;
+    CSM_RIGHT_TRIP_SWITCH, 28 ;
+    CSM_MCU_Faults, 32 ;
+    CSM_CHKSUM, 60 ;
+    CSM_PROCESS_COUNTER, 56 ;
+    CSM_RESPONSE_ERROR, 36 ;
+  }
+  ETAT_REVEIL_CSM: 28, CSM, 1 {
+    E_CSM_PARK_LAMP_REQUEST, 0 ;
+  }
+  CSM_Traceability_Info_1: 9, CSM, 8 {
+    CSM_BCM_PDEF_NUM, 0 ;
+    CSM_BCM_ECU_MFD_DAY, 40 ;
+    CSM_BCM_ECU_MFD_MONTH, 48 ;
+    CSM_BCM_ECU_MFD_YEAR, 56 ;
+  }
+  CSM_Traceability_Info_2: 8, CSM, 8 {
+    CSM_BCM_PREAL_NUM, 0 ;
+    CSM_BCM_SUP_CODE, 40 ;
+  }
+  CSM_Traceability_Info_3: 7, CSM, 8 {
+    CSM_BCM_SRL_NUM_1, 0 ;
+  }
+  BCM_FPAS_INFO: 52, BCM, 8 {
+    VEHICLE_SPEED, 0 ;
+    TM_GEAR_POSITION, 16 ;
+    WIPER_STATUS, 19 ;
+    VEHICLE_SPEED_VALIDITY, 21 ;
+    AMBIENT_TEMP, 24 ;
+    FPAS_VEH_TYPE, 32 ;
+    INTERD_MEMO_DEF, 36 ;
+    DEM_EFFAC_DEF, 37 ;
+  }
+  FPAS_SENSOR_INFO: 58, FPAS, 8 {
+    FRONT_LEFT_SENSOR_STATUS, 0 ;
+    FRONT_LEFT_MIDDLE_SENSOR_STATUS, 1 ;
+    FRONT_RIGHT_MIDDLE_SENSOR_STATUS, 2 ;
+    FRONT_RIGHT_SENSOR_STATUS, 3 ;
+    FPAS_FL_DETECT_INFO, 4 ;
+    FPAS_FLM_DETECT_INFO, 8 ;
+    FPAS_FRM_DETECT_INFO, 11 ;
+    FPAS_FR_DETECT_INFO, 16 ;
+    FPAS_OBJECT_DIST, 24 ;
+    FPAS_ACTIVATION_STATUS, 22 ;
+    FPAS_ALARM_LEVEL, 19 ;
+    FPAS_CAL_STATUS, 32 ;
+    FPAS_RESP_ERROR, 34 ;
+  }
+  ETAT_BMF: 16, RSBR, 4 {
+    IHM_INHIB, 8 ;
+    RESP_ERROR_BMF, 16 ;
+  }
+  CDE_BMF: 48, BCM, 8 {
+    ABPI, 14 ;
+    OUCC, 0 ;
+    OUCC_CLIG, 1 ;
+    OUCP, 2 ;
+    OUCP_CLIG, 3 ;
+    OUCARG1, 4 ;
+    OUCARG1_CLIG, 5 ;
+    OUCARM1, 6 ;
+    OUCARM1_CLIG, 7 ;
+    OUCARD1, 8 ;
+    OUCARD1_CLIG, 9 ;
+    OUCARG2, 10 ;
+    OUCARG2_CLIG, 11 ;
+    OUCARD2, 12 ;
+    OUCARD2_CLIG, 13 ;
+    ETAT_JN, 48 ;
+    TYPE_DIR, 50 ;
+    OUCAVM, 52 ;
+    OUCAVM_CLIG, 53 ;
+    ACT_RBG_PASS, 56 ;
+    TYPE_CLIGNOT_TEM_INHIB, 62 ;
+  }
+  CDE_RESEAU_LIN: 59, BCM, 8 {
+    CDE_PV_LIN, 0 ;
+    INFO_COM_OFF, 8 ;
+  }
+  CSM_Traceability_Info_4: 6, CSM, 8 {
+    CSM_BCM_SRL_NUM_2, 0 ;
+  }
+  CSM_Traceability_Info_5: 5, CSM, 8 {
+    CSM_BCM_SRL_NUM_3, 0 ;
+  }
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  BECB{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x44 ;
+    initial_NAD = 0x44 ;
+    product_id = 0x40, 0x7001, 254 ;
+    response_error = LIN_ERROR_FLAG ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      IBS_FRAME_1 ;
+      IBS_FRAME_2 ;
+      IBS_FRAME_3 ;
+      IBS_FRAME_4 ;
+      WAKE_UP_REQUEST ;
+    }
+  }
+  CSM{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0xFF ;
+    initial_NAD = 0xFF ;
+    product_id = 0x0, 0x0, 255 ;
+    response_error = CSM_RESPONSE_ERROR ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      CSM_REQ_1Fh ;
+      ETAT_REVEIL_CSM ;
+      CSM_Traceability_Info_1 ;
+      CSM_Traceability_Info_2 ;
+      CSM_Traceability_Info_3 ;
+      CDE_RESEAU_LIN ;
+      CSM_Traceability_Info_4 ;
+      CSM_Traceability_Info_5 ;
+    }
+  }
+  RSBR{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x73 ;
+    initial_NAD = 0x73 ;
+    product_id = 0x0, 0x0, 255 ;
+    response_error = RESP_ERROR_BMF ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      ETAT_BMF ;
+      CDE_BMF ;
+    }
+  }
+  FPAS{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x58 ;
+    initial_NAD = 0x58 ;
+    product_id = 0x0, 0x0, 255 ;
+    response_error = FPAS_RESP_ERROR ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      BCM_FPAS_INFO ;
+      FPAS_SENSOR_INFO ;
+      CDE_RESEAU_LIN ;
+    }
+  }
+}
+
+Schedule_tables {
+ CC24_OV24_SCHEDULE_TABLE_2 {
+    IBS_FRAME_1 delay 10 ms ;
+    IBS_FRAME_2 delay 10 ms ;
+    CDE_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 10 ms ;
+    BCM_FPAS_INFO delay 10 ms ;
+    IBS_FRAME_3 delay 10 ms ;
+    FPAS_SENSOR_INFO delay 10 ms ;
+    ETAT_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 10 ms ;
+    IBS_FRAME_4 delay 10 ms ;
+    IBS_FRAME_1 delay 10 ms ;
+    IBS_FRAME_2 delay 10 ms ;
+    CDE_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 10 ms ;
+    BCM_FPAS_INFO delay 10 ms ;
+    IBS_FRAME_3 delay 10 ms ;
+    FPAS_SENSOR_INFO delay 10 ms ;
+    ETAT_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 10 ms ;
+    IBS_FRAME_4 delay 10 ms ;
+    IBS_FRAME_1 delay 10 ms ;
+    IBS_FRAME_2 delay 10 ms ;
+    CDE_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 10 ms ;
+    BCM_FPAS_INFO delay 10 ms ;
+    IBS_FRAME_3 delay 10 ms ;
+    FPAS_SENSOR_INFO delay 10 ms ;
+    ETAT_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 10 ms ;
+    IBS_FRAME_4 delay 10 ms ;
+    IBS_FRAME_1 delay 10 ms ;
+    IBS_FRAME_2 delay 10 ms ;
+    CDE_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 10 ms ;
+    BCM_FPAS_INFO delay 10 ms ;
+    IBS_FRAME_3 delay 10 ms ;
+    FPAS_SENSOR_INFO delay 10 ms ;
+    ETAT_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 10 ms ;
+    IBS_FRAME_4 delay 10 ms ;
+  }
+ CC21_CC24_OV24_SCHEDULE_TABLE_1 {
+    IBS_FRAME_1 delay 10 ms ;
+    IBS_FRAME_2 delay 10 ms ;
+    CDE_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 20 ms ;
+    IBS_FRAME_3 delay 20 ms ;
+    ETAT_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 10 ms ;
+    IBS_FRAME_4 delay 10 ms ;
+    IBS_FRAME_1 delay 10 ms ;
+    IBS_FRAME_2 delay 10 ms ;
+    CDE_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 20 ms ;
+    IBS_FRAME_3 delay 20 ms ;
+    ETAT_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 10 ms ;
+    IBS_FRAME_4 delay 10 ms ;
+    IBS_FRAME_1 delay 10 ms ;
+    IBS_FRAME_2 delay 10 ms ;
+    CDE_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 20 ms ;
+    IBS_FRAME_3 delay 20 ms ;
+    ETAT_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 10 ms ;
+    IBS_FRAME_4 delay 10 ms ;
+    IBS_FRAME_1 delay 10 ms ;
+    IBS_FRAME_2 delay 10 ms ;
+    CDE_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 20 ms ;
+    IBS_FRAME_3 delay 20 ms ;
+    ETAT_BMF delay 10 ms ;
+    CSM_REQ_1Fh delay 10 ms ;
+    IBS_FRAME_4 delay 10 ms ;
+  }
+ WAKEUP_FILTERING_SCHEDULE_TABLE {
+    ETAT_REVEIL_CSM delay 5 ms ;
+    WAKE_UP_REQUEST delay 5 ms ;
+  }
+ VALID_WAKEUP_SCH_TABLE {
+    CDE_RESEAU_LIN delay 10 ms ;
+    CDE_RESEAU_LIN delay 10 ms ;
+  }
+ SLEEP_SCHEDULE_TABLE {
+    CDE_RESEAU_LIN delay 10 ms ;
+    CDE_RESEAU_LIN delay 10 ms ;
+  }
+ TRACEABILITY_SCH_TABLE {
+    CSM_Traceability_Info_1 delay 10 ms ;
+    CSM_Traceability_Info_2 delay 10 ms ;
+    CSM_Traceability_Info_3 delay 10 ms ;
+    CSM_Traceability_Info_4 delay 10 ms ;
+    CSM_Traceability_Info_5 delay 10 ms ;
+  }
+ DIAG_MASTER_REQ_TABLE {
+    MasterReq delay 10 ms ;
+  }
+ DIAG_SLAVE_RES_TABLE {
+    SlaveResp delay 10 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  ABPI_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Inhibited" ;
+  }
+  ACT_RBG_PASS_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Non activated" ;
+    logical_value, 1, "Activated" ;
+  }
+  AMBIENT_TEMP_Encoding {
+    physical_value, 0, 250, 0.5, -40, "Degree C" ;
+    physical_value, 251, 255, 1, 0, "Invalid range" ;
+  }
+  BAT_AH_COUNTER_Encoding {
+    physical_value, 0, 500, 0.2, -50, "Ah" ;
+    logical_value, 502, "Reserved" ;
+    logical_value, 503, "Reserved" ;
+    logical_value, 504, "Reserved" ;
+    logical_value, 505, "Reserved" ;
+    logical_value, 506, "Reserved" ;
+    logical_value, 507, "Reserved" ;
+    logical_value, 508, "Reserved" ;
+    logical_value, 509, "Reserved" ;
+    logical_value, 510, "Not available" ;
+    logical_value, 511, "Invalid" ;
+  }
+  BAT_I_MAX_Encoding {
+    physical_value, 0, 60, 20, -1500, "A" ;
+    logical_value, 61, "Reserved" ;
+    logical_value, 62, "Unavailable" ;
+    logical_value, 63, "Invalid" ;
+  }
+  BAT_I_MAX_LOW_CURRENT_Encoding {
+    physical_value, 0, 60, 2, -120, "A" ;
+    logical_value, 61, "Reserved" ;
+    logical_value, 62, "Unavailable" ;
+    logical_value, 63, "Invalid" ;
+  }
+  BAT_RES_INT_ESTIM_Encoding {
+    physical_value, 0, 1000, 0.01, 0, "mOhm" ;
+    logical_value, 1022, "Unavailable" ;
+    logical_value, 1023, "Invalid" ;
+  }
+  BAT_RINT_LOW_CUR_Encoding {
+    physical_value, 0, 100, 0.1, 5, "mOhm" ;
+    logical_value, 101, "Reserved" ;
+    logical_value, 102, "Reserved" ;
+    logical_value, 103, "Reserved" ;
+    logical_value, 104, "Reserved" ;
+    logical_value, 105, "Reserved" ;
+    logical_value, 106, "Reserved" ;
+    logical_value, 107, "Reserved" ;
+    logical_value, 108, "Reserved" ;
+    logical_value, 109, "Reserved" ;
+    logical_value, 110, "Reserved" ;
+    logical_value, 111, "Reserved" ;
+    logical_value, 112, "Reserved" ;
+    logical_value, 113, "Reserved" ;
+    logical_value, 114, "Reserved" ;
+    logical_value, 115, "Reserved" ;
+    logical_value, 116, "Reserved" ;
+    logical_value, 117, "Reserved" ;
+    logical_value, 118, "Reserved" ;
+    logical_value, 119, "Reserved" ;
+    logical_value, 120, "Reserved" ;
+    logical_value, 121, "Reserved" ;
+    logical_value, 122, "Reserved" ;
+    logical_value, 123, "Reserved" ;
+    logical_value, 124, "Reserved" ;
+    logical_value, 125, "Reserved" ;
+    logical_value, 126, "Unavailabe" ;
+    logical_value, 127, "Invalid" ;
+  }
+  BAT_RINT_LOW_CUR_ST_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Reliable" ;
+    logical_value, 1, "Not done" ;
+    logical_value, 2, "Not reliable" ;
+    logical_value, 3, "Invalid" ;
+  }
+  BAT_RINT_NORM_Encoding {
+    physical_value, 0, 100, 0.1, 0, "mOhm" ;
+    logical_value, 101, "Reserved" ;
+    logical_value, 102, "Reserved" ;
+    logical_value, 103, "Reserved" ;
+    logical_value, 104, "Reserved" ;
+    logical_value, 105, "Reserved" ;
+    logical_value, 106, "Reserved" ;
+    logical_value, 107, "Reserved" ;
+    logical_value, 108, "Reserved" ;
+    logical_value, 109, "Reserved" ;
+    logical_value, 110, "Reserved" ;
+    logical_value, 111, "Reserved" ;
+    logical_value, 112, "Reserved" ;
+    logical_value, 113, "Reserved" ;
+    logical_value, 114, "Reserved" ;
+    logical_value, 115, "Reserved" ;
+    logical_value, 116, "Reserved" ;
+    logical_value, 117, "Reserved" ;
+    logical_value, 118, "Reserved" ;
+    logical_value, 119, "Reserved" ;
+    logical_value, 120, "Reserved" ;
+    logical_value, 121, "Reserved" ;
+    logical_value, 122, "Reserved" ;
+    logical_value, 123, "Reserved" ;
+    logical_value, 124, "Reserved" ;
+    logical_value, 125, "Reserved" ;
+    logical_value, 126, "Indisponible" ;
+    logical_value, 127, "Invalide" ;
+  }
+  BAT_RINT_RIPPLE_Encoding {
+    physical_value, 0, 180, 0.1, 2, "mOhm" ;
+    logical_value, 181, "Reserved" ;
+    logical_value, 182, "Reserved" ;
+    logical_value, 183, "Reserved" ;
+    logical_value, 184, "Reserved" ;
+    logical_value, 185, "Reserved" ;
+    logical_value, 186, "Reserved" ;
+    logical_value, 187, "Reserved" ;
+    logical_value, 188, "Reserved" ;
+    logical_value, 189, "Reserved" ;
+    logical_value, 190, "Reserved" ;
+    logical_value, 191, "Reserved" ;
+    logical_value, 192, "Reserved" ;
+    logical_value, 193, "Reserved" ;
+    logical_value, 194, "Reserved" ;
+    logical_value, 195, "Reserved" ;
+    logical_value, 196, "Reserved" ;
+    logical_value, 197, "Reserved" ;
+    logical_value, 198, "Reserved" ;
+    logical_value, 199, "Reserved" ;
+    logical_value, 200, "Reserved" ;
+    logical_value, 201, "Reserved" ;
+    logical_value, 202, "Reserved" ;
+    logical_value, 203, "Reserved" ;
+    logical_value, 204, "Reserved" ;
+    logical_value, 205, "Reserved" ;
+    logical_value, 206, "Reserved" ;
+    logical_value, 207, "Reserved" ;
+    logical_value, 208, "Reserved" ;
+    logical_value, 209, "Reserved" ;
+    logical_value, 210, "Reserved" ;
+    logical_value, 211, "Reserved" ;
+    logical_value, 212, "Reserved" ;
+    logical_value, 213, "Reserved" ;
+    logical_value, 214, "Reserved" ;
+    logical_value, 215, "Reserved" ;
+    logical_value, 216, "Reserved" ;
+    logical_value, 217, "Reserved" ;
+    logical_value, 218, "Reserved" ;
+    logical_value, 219, "Reserved" ;
+    logical_value, 220, "Reserved" ;
+    logical_value, 221, "Reserved" ;
+    logical_value, 222, "Reserved" ;
+    logical_value, 223, "Reserved" ;
+    logical_value, 224, "Reserved" ;
+    logical_value, 225, "Reserved" ;
+    logical_value, 226, "Reserved" ;
+    logical_value, 227, "Reserved" ;
+    logical_value, 228, "Reserved" ;
+    logical_value, 229, "Reserved" ;
+    logical_value, 230, "Reserved" ;
+    logical_value, 231, "Reserved" ;
+    logical_value, 232, "Reserved" ;
+    logical_value, 233, "Reserved" ;
+    logical_value, 234, "Reserved" ;
+    logical_value, 235, "Reserved" ;
+    logical_value, 236, "Reserved" ;
+    logical_value, 237, "Reserved" ;
+    logical_value, 238, "Reserved" ;
+    logical_value, 239, "Reserved" ;
+    logical_value, 240, "Reserved" ;
+    logical_value, 241, "Reserved" ;
+    logical_value, 242, "Reserved" ;
+    logical_value, 243, "Reserved" ;
+    logical_value, 244, "Reserved" ;
+    logical_value, 245, "Reserved" ;
+    logical_value, 246, "Reserved" ;
+    logical_value, 247, "Reserved" ;
+    logical_value, 248, "Reserved" ;
+    logical_value, 249, "Reserved" ;
+    logical_value, 250, "Reserved" ;
+    logical_value, 251, "Reserved" ;
+    logical_value, 252, "Reserved" ;
+    logical_value, 253, "Disconnected" ;
+    logical_value, 254, "not available" ;
+    logical_value, 255, " Invalid" ;
+  }
+  BAT_RINT_RIPPLE_ST_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "low error" ;
+    logical_value, 1, "medium error" ;
+    logical_value, 2, "high error" ;
+    logical_value, 3, "highest error" ;
+  }
+  BAT_SOH_Encoding_1 {
+    physical_value, 0, 100, 1, 0, "%" ;
+    logical_value, 127, "Invalid" ;
+  }
+  BAT_U_MIN_Encoding {
+    physical_value, 0, 1000, 0.01, 3, "V" ;
+    logical_value, 1001, "Reserved" ;
+    logical_value, 1002, "Reserved" ;
+    logical_value, 1003, "Reserved" ;
+    logical_value, 1004, "Reserved" ;
+    logical_value, 1005, "Reserved" ;
+    logical_value, 1006, "Reserved" ;
+    logical_value, 1007, "Reserved" ;
+    logical_value, 1008, "Reserved" ;
+    logical_value, 1009, "Reserved" ;
+    logical_value, 1010, "Reserved" ;
+    logical_value, 1011, "Reserved" ;
+    logical_value, 1012, "Reserved" ;
+    logical_value, 1013, "Reserved" ;
+    logical_value, 1014, "Reserved" ;
+    logical_value, 1015, "Reserved" ;
+    logical_value, 1016, "Reserved" ;
+    logical_value, 1017, "Reserved" ;
+    logical_value, 1018, "Reserved" ;
+    logical_value, 1019, "Reserved" ;
+    logical_value, 1020, "Reserved" ;
+    logical_value, 1021, "Reserved" ;
+    logical_value, 1022, "Unavailable" ;
+    logical_value, 1023, "Invalid" ;
+  }
+  BAT_U_MIN_LOW_CURRENT_Encoding {
+    physical_value, 0, 29, 0.1, 10, "V" ;
+    logical_value, 30, "Unavailable" ;
+    logical_value, 31, "Invalid" ;
+  }
+  CALIBRE_IBATT_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " [-1 A ; +1 A] (res: 1mA)" ;
+    logical_value, 1, "[-200 A ; +200 A] (res: 10mA)" ;
+    logical_value, 2, "[-1500 A ; +1500 A] (res: 100mA)" ;
+    logical_value, 3, "Invalid" ;
+  }
+  CDE_PV_LIN_Encoding {
+    physical_value, 0, 255, 1, 0 ;
+    logical_value, 0, "Preparing to go to sleep" ;
+    logical_value, 1, "Wake up authorization" ;
+    logical_value, 255, "Invalid" ;
+  }
+  COMPTEUR_TENTATIVE_REVEIL_Encoding {
+    physical_value, 0, 14, 1, 0, "#" ;
+    physical_value, 4, 15, 1, 0, "Reserved" ;
+  }
+  CPT_PROCESS_IBS_FRAME_3_Encoding {
+    physical_value, 0, 0, 1, 0 ;
+  }
+  CSM_AUTO_PARK_LOW_BEAM_Encoding {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "Error state 4(all auto+park+low faulty)" ;
+    logical_value, 1, "Auto/OFF" ;
+    logical_value, 2, "Park/Position" ;
+    logical_value, 3, " Error state 1(park+low faulty)" ;
+    logical_value, 4, "Low Beam" ;
+    logical_value, 5, "Error state 2(low+auto faulty)" ;
+    logical_value, 6, "Error state 3(auto+park faulty)" ;
+    logical_value, 7, " switch faulty status" ;
+  }
+  CSM_BCM_ECU_MFD_DAY_Encoding {
+    physical_value, 0, 30, 1, 1 ;
+  }
+  CSM_BCM_ECU_MFD_MONTH_Encoding {
+    physical_value, 0, 11, 1, 1 ;
+  }
+  CSM_BCM_ECU_MFD_YEAR_Encoding {
+    physical_value, 0, 77, 1, 22 ;
+  }
+  CSM_BCM_SUP_CODE_Encoding {
+    physical_value, 0, 65535, 1, 0 ;
+  }
+  CSM_CHKSUM_Encoding {
+    physical_value, 0, 15, 1, 0 ;
+  }
+  CSM_FOG_FRONT_REAR_STATUS_Encoding {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "Reserved" ;
+    logical_value, 1, "No Selection" ;
+    logical_value, 2, "Front fog ON" ;
+    logical_value, 3, "Rear fog ON" ;
+    logical_value, 4, "front off" ;
+    logical_value, 5, "Rear off" ;
+    logical_value, 6, "Error state 1(front/rear switch faulty)" ;
+    logical_value, 7, "switch faulty status" ;
+  }
+  CSM_FRONT_WASHER_STATUS_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Reserved" ;
+    logical_value, 1, "No selection" ;
+    logical_value, 2, "Front Washer" ;
+    logical_value, 3, "Front Washer Switch faulty status" ;
+  }
+  CSM_FRONT_WIPER_STATUS_Encoding {
+    physical_value, 0, 15, 1, 0 ;
+    logical_value, 0, "Reserved" ;
+    logical_value, 1, "Off" ;
+    logical_value, 2, "Intermittent" ;
+    logical_value, 3, "Auto/Mist" ;
+    logical_value, 4, "Low speed" ;
+    logical_value, 5, "Reserved" ;
+    logical_value, 6, "Reserved" ;
+    logical_value, 7, "Reserved" ;
+    logical_value, 8, "High Speed" ;
+    logical_value, 9, "Reserved" ;
+    logical_value, 10, "Reserved" ;
+    logical_value, 11, "Reserved" ;
+    logical_value, 12, "Reserved" ;
+    logical_value, 13, "Reserved" ;
+    logical_value, 14, "Reserved" ;
+    logical_value, 15, "front wiper switch faulty" ;
+  }
+  CSM_HIGH_PASS_BEAM_Encoding {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "Reserved" ;
+    logical_value, 1, "Pass Beam" ;
+    logical_value, 2, "No Selection" ;
+    logical_value, 3, "Reserved" ;
+    logical_value, 4, "High Beam" ;
+    logical_value, 5, "Error state 1" ;
+    logical_value, 6, "Reserved" ;
+    logical_value, 7, "switch faulty status" ;
+  }
+  CSM_MCU_Faults_Encoding {
+    physical_value, 0, 15, 1, 0 ;
+    logical_value, 0, " No fault" ;
+    logical_value, 1, "Overvoltage" ;
+    logical_value, 2, "Undervoltage" ;
+    logical_value, 3, "Watchdog_Reset" ;
+    logical_value, 4, "ROM_Err" ;
+    logical_value, 5, "RAM_Err" ;
+    logical_value, 6, "EEPROM_Err" ;
+    logical_value, 7, "Open_Circuit" ;
+    logical_value, 8, "Short_Battery" ;
+    logical_value, 9, "Short_Ground" ;
+    logical_value, 10, "SBC_over_under_voltage_Err" ;
+    logical_value, 11, "Stack_under_over_flow_Err" ;
+    logical_value, 12, "internal_Clock_Err" ;
+    logical_value, 13, "Register_Err" ;
+    logical_value, 14, "Task_Err" ;
+    logical_value, 15, "Reserved" ;
+  }
+  CSM_MIST_STATUS_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Reserved" ;
+    logical_value, 1, "OFF" ;
+    logical_value, 2, "ON" ;
+    logical_value, 3, "Switch faulty" ;
+  }
+  CSM_PROCESS_COUNTER_Encoding {
+    physical_value, 0, 15, 1, 0 ;
+  }
+  CSM_REAR_WIPER_WASHER_STATUS_Encoding {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "Reserved" ;
+    logical_value, 1, "No Selection" ;
+    logical_value, 2, " Rear Wiper" ;
+    logical_value, 3, " Reserved" ;
+    logical_value, 4, "Rear Washers" ;
+    logical_value, 5, "Reserved" ;
+    logical_value, 6, "Rear wiper switch faulty" ;
+    logical_value, 7, "Rear washer switch faulty" ;
+  }
+  CSM_RIGHT_TRIP_SWITCH_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Switch not pressed" ;
+    logical_value, 1, "Switch Short Press" ;
+    logical_value, 2, "Switch Long press" ;
+    logical_value, 3, "Switch faulty(stuck)" ;
+  }
+  CSM_TURN_INDICATOR_LANE_CHANGE_STATUS_Encoding {
+    physical_value, 0, 15, 1, 0 ;
+    logical_value, 0, "Reserved" ;
+    logical_value, 1, "No Selection" ;
+    logical_value, 2, "Turn Light - Left" ;
+    logical_value, 3, "Turn Light - Left during Lane change" ;
+    logical_value, 4, "Turn Light - Right" ;
+    logical_value, 5, "Reserved" ;
+    logical_value, 6, "Reserved" ;
+    logical_value, 7, "Reserved" ;
+    logical_value, 8, "Turn Light - Right during Lane change" ;
+    logical_value, 9, "Reserved" ;
+    logical_value, 10, "Reserved" ;
+    logical_value, 11, "Reserved" ;
+    logical_value, 12, "Reserved" ;
+    logical_value, 13, "Reserved" ;
+    logical_value, 14, "Reserved" ;
+    logical_value, 15, "switch faulty status" ;
+  }
+  DEM_EFFAC_DEF_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Fault Clearing No request" ;
+    logical_value, 1, "Fault Clearing Request" ;
+  }
+  ETAT_JN_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Day status" ;
+    logical_value, 1, "Night status" ;
+  }
+  E_CSM_PARK_LAMP_REQUEST_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No request from user" ;
+    logical_value, 1, "Request from user" ;
+  }
+  E_VALEUR_SEUIL_Encoding_1 {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No detection of step" ;
+    logical_value, 1, "SOC step crossed" ;
+  }
+  FPAS_ACTIVATION_STATUS_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Deactivated" ;
+    logical_value, 1, "Activated" ;
+    logical_value, 2, "System Error" ;
+    logical_value, 3, "Reserved" ;
+  }
+  FPAS_ALARM_LEVEL_Encoding {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "No Request" ;
+    logical_value, 1, "FPAS Pattern 4" ;
+    logical_value, 2, "FPAS Pattern 3" ;
+    logical_value, 3, "FPAS Pattern 2" ;
+    logical_value, 4, "FPAS Pattern 1" ;
+    logical_value, 5, "Reserved" ;
+    logical_value, 6, "Reserved" ;
+    logical_value, 7, "Reserved" ;
+  }
+  FPAS_CAL_STATUS_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Not calibrated" ;
+    logical_value, 1, "Calibrated" ;
+    logical_value, 2, "Incorrect calibration" ;
+    logical_value, 3, "Reserved" ;
+  }
+  FPAS_FLM_DETECT_INFO_Encoding {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "No object" ;
+    logical_value, 1, "Zone 1" ;
+    logical_value, 2, "Zone 2" ;
+    logical_value, 3, "Zone 3" ;
+    logical_value, 4, "Zone 4" ;
+    logical_value, 5, "Reserved" ;
+    logical_value, 6, "Reserved" ;
+    logical_value, 7, "Reserved" ;
+  }
+  FPAS_FL_DETECT_INFO_Encoding {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "No object" ;
+    logical_value, 1, "Zone 1" ;
+    logical_value, 2, "Zone 2" ;
+    logical_value, 3, "Zone 3" ;
+    logical_value, 4, "Zone 4" ;
+    logical_value, 5, "Reserved" ;
+    logical_value, 6, "Reserved" ;
+    logical_value, 7, "Reserved" ;
+  }
+  FPAS_FRM_DETECT_INFO_Encoding {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "No object" ;
+    logical_value, 1, "Zone 1" ;
+    logical_value, 2, "Zone 2" ;
+    logical_value, 3, "Zone 3" ;
+    logical_value, 4, "Zone 4" ;
+    logical_value, 5, "Reserved" ;
+    logical_value, 6, "Reserved" ;
+    logical_value, 7, "Reserved" ;
+  }
+  FPAS_FR_DETECT_INFO_Encoding {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "No object" ;
+    logical_value, 1, "Zone 1" ;
+    logical_value, 2, "Zone 2" ;
+    logical_value, 3, "Zone 3" ;
+    logical_value, 4, "Zone 4" ;
+    logical_value, 5, "Reserved" ;
+    logical_value, 6, "Reserved" ;
+    logical_value, 7, "Reserved" ;
+  }
+  FPAS_OBJECT_DIST_Encoding {
+    physical_value, 0, 255, 1, 0, "cm" ;
+  }
+  FPAS_RESP_ERROR_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No error" ;
+    logical_value, 1, "Error" ;
+  }
+  FPAS_VEH_TYPE_Encoding {
+    physical_value, 0, 15, 1, 0 ;
+    logical_value, 0, "CC24" ;
+    logical_value, 1, "OV24" ;
+    logical_value, 2, "F1H_FPAS" ;
+    logical_value, 3, "Reserved" ;
+    logical_value, 4, "Reserved" ;
+    logical_value, 5, "Reserved" ;
+    logical_value, 6, "Reserved" ;
+    logical_value, 7, "Reserved" ;
+    logical_value, 8, "Reserved" ;
+    logical_value, 9, "Reserved" ;
+    logical_value, 10, "Reserved" ;
+    logical_value, 11, "Reserved" ;
+    logical_value, 12, "Reserved" ;
+    logical_value, 13, "Reserved" ;
+    logical_value, 14, "Reserved" ;
+    logical_value, 15, "Reserved" ;
+  }
+  FRONT_LEFT_MIDDLE_SENSOR_STATUS_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Sensor OK" ;
+    logical_value, 1, "Sensor not good" ;
+  }
+  FRONT_LEFT_SENSOR_STATUS_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Sensor OK" ;
+    logical_value, 1, "Sensor Not good" ;
+  }
+  FRONT_RIGHT_MIDDLE_SENSOR_STATUS_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Sensor OK" ;
+    logical_value, 1, "Sensor not good" ;
+  }
+  FRONT_RIGHT_SENSOR_STATUS_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Sensor OK" ;
+    logical_value, 1, "Sensor not good" ;
+  }
+  IBATT_Encoding {
+    physical_value, 0, 65534, 1, 0 ;
+    logical_value, 65535, "Invalide" ;
+  }
+  IBATT_FAULT_Encoding {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "Not available" ;
+    logical_value, 1, "No fault" ;
+    logical_value, 2, "Reserved" ;
+    logical_value, 3, "Reserved" ;
+    logical_value, 4, "out of range too low" ;
+    logical_value, 5, "out of range too high" ;
+    logical_value, 6, "open circuit" ;
+    logical_value, 7, "unspecified fault" ;
+  }
+  IBS_GENERIC_FAULT_Encoding {
+    physical_value, 0, 31, 1, 0 ;
+    logical_value, 0, "No fault" ;
+    logical_value, 1, "frame invalid" ;
+    logical_value, 2, "ROM fault" ;
+    logical_value, 4, "RAM fault" ;
+    logical_value, 8, "Watchdog fault" ;
+    logical_value, 16, "Telecodage fault" ;
+  }
+  IHM_INHIB_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Undefined" ;
+    logical_value, 1, "Reporting" ;
+    logical_value, 2, "No reporting" ;
+    logical_value, 3, "Fault" ;
+  }
+  INFO_COM_OFF_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not activated" ;
+    logical_value, 1, "Activated" ;
+  }
+  INTERD_MEMO_DEF_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Fault memorisation Disactivation" ;
+    logical_value, 1, "Fault memorisation Activation" ;
+  }
+  I_VEILLE_MINI_Encoding {
+    physical_value, 0, 200, 0.005, 0, "A" ;
+    logical_value, 253, "Measurement not performed" ;
+    logical_value, 254, "Greater than 1 A" ;
+    logical_value, 255, "Invalid" ;
+  }
+  LIN_ERROR_FLAG_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No error" ;
+    logical_value, 1, "Error" ;
+  }
+  OUCARD1_CLIG_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Fixed lamp" ;
+    logical_value, 1, "Blinking lamp" ;
+  }
+  OUCARD1_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Omission" ;
+  }
+  OUCARD2_CLIG_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Fixed lamp" ;
+    logical_value, 1, "Blinking lamp" ;
+  }
+  OUCARD2_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Omission" ;
+  }
+  OUCARG1_CLIG_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Fixed lamp" ;
+    logical_value, 1, "Blinking lamp" ;
+  }
+  OUCARG1_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Omission" ;
+  }
+  OUCARG2_CLIG_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Fixed lamp" ;
+    logical_value, 1, "Blinking lamp" ;
+  }
+  OUCARG2_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Omission" ;
+  }
+  OUCARM1_CLIG_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Fixed lamp" ;
+    logical_value, 1, "Blinking lamp" ;
+  }
+  OUCARM1_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Omission" ;
+  }
+  OUCAVM_CLIG_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Fixed lamp" ;
+    logical_value, 1, "Blinking lamp" ;
+  }
+  OUCAVM_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Omission" ;
+  }
+  OUCC_CLIG_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Fixed lamp" ;
+    logical_value, 1, "Blinking lamp" ;
+  }
+  OUCC_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Omission" ;
+  }
+  OUCP_CLIG_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Fixed lamp" ;
+    logical_value, 1, "Blinking lamp" ;
+  }
+  OUCP_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Omission" ;
+  }
+  RESP_ERROR_BMF_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No detected error" ;
+    logical_value, 1, "Detected error" ;
+  }
+  SOC_ERROR_Encoding {
+    physical_value, 0, 14, 1, 0, "%" ;
+    logical_value, 15, "Initial value" ;
+  }
+  SOF_SAFETY_Encoding {
+    physical_value, 0, 200, 0.02, 8, "V" ;
+    logical_value, 200, "Reserved" ;
+    logical_value, 201, "Reserved" ;
+    logical_value, 202, "Reserved" ;
+    logical_value, 203, "Reserved" ;
+    logical_value, 204, "Reserved" ;
+    logical_value, 205, "Reserved" ;
+    logical_value, 206, "Reserved" ;
+    logical_value, 207, "Reserved" ;
+    logical_value, 208, "Reserved" ;
+    logical_value, 209, "Reserved" ;
+    logical_value, 210, "Reserved" ;
+    logical_value, 211, "Reserved" ;
+    logical_value, 212, "Reserved" ;
+    logical_value, 213, "Reserved" ;
+    logical_value, 214, "Reserved" ;
+    logical_value, 215, "Reserved" ;
+    logical_value, 216, "Reserved" ;
+    logical_value, 217, "Reserved" ;
+    logical_value, 218, "Reserved" ;
+    logical_value, 219, "Reserved" ;
+    logical_value, 220, "Reserved" ;
+    logical_value, 221, "Reserved" ;
+    logical_value, 222, "Reserved" ;
+    logical_value, 223, "Reserved" ;
+    logical_value, 224, "Reserved" ;
+    logical_value, 225, "Reserved" ;
+    logical_value, 226, "Reserved" ;
+    logical_value, 227, "Reserved" ;
+    logical_value, 228, "Reserved" ;
+    logical_value, 229, "Reserved" ;
+    logical_value, 230, "Reserved" ;
+    logical_value, 231, "Reserved" ;
+    logical_value, 232, "Reserved" ;
+    logical_value, 233, "Reserved" ;
+    logical_value, 234, "Reserved" ;
+    logical_value, 235, "Reserved" ;
+    logical_value, 236, "Reserved" ;
+    logical_value, 237, "Reserved" ;
+    logical_value, 238, "Reserved" ;
+    logical_value, 239, "Reserved" ;
+    logical_value, 240, "Reserved" ;
+    logical_value, 241, "Reserved" ;
+    logical_value, 242, "Reserved" ;
+    logical_value, 243, "Reserved" ;
+    logical_value, 244, "Reserved" ;
+    logical_value, 245, "Reserved" ;
+    logical_value, 246, "Reserved" ;
+    logical_value, 247, "Reserved" ;
+    logical_value, 248, "Reserved" ;
+    logical_value, 249, "Reserved" ;
+    logical_value, 250, "Reserved" ;
+    logical_value, 251, "Reserved" ;
+    logical_value, 252, "Reserved" ;
+    logical_value, 253, "Reserved" ;
+    logical_value, 254, "not available" ;
+    logical_value, 255, "Invalid" ;
+  }
+  SOF_SAFETY_ST_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "low error" ;
+    logical_value, 1, "medium error" ;
+    logical_value, 2, "high error" ;
+    logical_value, 3, "highest error" ;
+  }
+  SOH_STATUS_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Nominal" ;
+    logical_value, 1, "Degraded" ;
+    logical_value, 2, "fault" ;
+    logical_value, 3, "Invalid" ;
+  }
+  STATUS_SOC_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Nominal" ;
+    logical_value, 1, "Degraded" ;
+    logical_value, 2, "Fault" ;
+    logical_value, 3, "Invalid" ;
+  }
+  STATUS_TBATT_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "nominal" ;
+    logical_value, 1, "degraded" ;
+    logical_value, 2, "fault" ;
+    logical_value, 3, "invalid" ;
+  }
+  TBATT_Encoding {
+    physical_value, 0, 145, 1, -40, "Degree C" ;
+    logical_value, 92, "Reserved" ;
+    logical_value, 93, "Reserved" ;
+    logical_value, 94, "Reserved" ;
+    logical_value, 95, "Reserved" ;
+    logical_value, 96, "Reserved" ;
+    logical_value, 97, "Reserved" ;
+    logical_value, 98, "Reserved" ;
+    logical_value, 99, "Reserved" ;
+    logical_value, 100, "Reserved" ;
+    logical_value, 101, "Reserved" ;
+    logical_value, 102, "Reserved" ;
+    logical_value, 103, "Reserved" ;
+    logical_value, 104, "Reserved" ;
+    logical_value, 105, "Reserved" ;
+    logical_value, 106, "Reserved" ;
+    logical_value, 107, "Reserved" ;
+    logical_value, 108, "Reserved" ;
+    logical_value, 109, "Reserved" ;
+    logical_value, 110, "Reserved" ;
+    logical_value, 111, "Reserved" ;
+    logical_value, 112, "Reserved" ;
+    logical_value, 113, "Reserved" ;
+    logical_value, 114, "Reserved" ;
+    logical_value, 115, "Reserved" ;
+    logical_value, 116, "Reserved" ;
+    logical_value, 117, "Reserved" ;
+    logical_value, 118, "Reserved" ;
+    logical_value, 119, "Reserved" ;
+    logical_value, 120, "Reserved" ;
+    logical_value, 121, "Reserved" ;
+    logical_value, 122, "Reserved" ;
+    logical_value, 123, "Reserved" ;
+    logical_value, 124, "Reserved" ;
+    logical_value, 125, "Reserved" ;
+    logical_value, 126, "Reserved" ;
+    logical_value, 127, "Reserved" ;
+    logical_value, 128, "Reserved" ;
+    logical_value, 129, "Reserved" ;
+    logical_value, 130, "Reserved" ;
+    logical_value, 131, "Reserved" ;
+    logical_value, 132, "Reserved" ;
+    logical_value, 133, "Reserved" ;
+    logical_value, 134, "Reserved" ;
+    logical_value, 135, "Reserved" ;
+    logical_value, 136, "Reserved" ;
+    logical_value, 137, "Reserved" ;
+    logical_value, 138, "Reserved" ;
+    logical_value, 139, "Reserved" ;
+    logical_value, 140, "Reserved" ;
+    logical_value, 141, "Reserved" ;
+    logical_value, 142, "Reserved" ;
+    logical_value, 143, "Reserved" ;
+    logical_value, 144, "Reserved" ;
+    logical_value, 145, "Reserved" ;
+    logical_value, 146, "Reserved" ;
+    logical_value, 147, "Reserved" ;
+    logical_value, 148, "Reserved" ;
+    logical_value, 149, "Reserved" ;
+    logical_value, 150, "Reserved" ;
+    logical_value, 151, "Reserved" ;
+    logical_value, 152, "Reserved" ;
+    logical_value, 153, "Reserved" ;
+    logical_value, 154, "Reserved" ;
+    logical_value, 155, "Reserved" ;
+    logical_value, 156, "Reserved" ;
+    logical_value, 157, "Reserved" ;
+    logical_value, 158, "Reserved" ;
+    logical_value, 159, "Reserved" ;
+    logical_value, 160, "Reserved" ;
+    logical_value, 161, "Reserved" ;
+    logical_value, 162, "Reserved" ;
+    logical_value, 163, "Reserved" ;
+    logical_value, 164, "Reserved" ;
+    logical_value, 165, "Reserved" ;
+    logical_value, 166, "Reserved" ;
+    logical_value, 167, "Reserved" ;
+    logical_value, 168, "Reserved" ;
+    logical_value, 169, "Reserved" ;
+    logical_value, 170, "Reserved" ;
+    logical_value, 171, "Reserved" ;
+    logical_value, 172, "Reserved" ;
+    logical_value, 173, "Reserved" ;
+    logical_value, 174, "Reserved" ;
+    logical_value, 175, "Reserved" ;
+    logical_value, 176, "Reserved" ;
+    logical_value, 177, "Reserved" ;
+    logical_value, 178, "Reserved" ;
+    logical_value, 179, "Reserved" ;
+    logical_value, 180, "Reserved" ;
+    logical_value, 181, "Reserved" ;
+    logical_value, 182, "Reserved" ;
+    logical_value, 183, "Reserved" ;
+    logical_value, 184, "Reserved" ;
+    logical_value, 185, "Reserved" ;
+    logical_value, 186, "Reserved" ;
+    logical_value, 187, "Reserved" ;
+    logical_value, 188, "Reserved" ;
+    logical_value, 189, "Reserved" ;
+    logical_value, 190, "Reserved" ;
+    logical_value, 191, "Reserved" ;
+    logical_value, 192, "Reserved" ;
+    logical_value, 193, "Reserved" ;
+    logical_value, 194, "Reserved" ;
+    logical_value, 195, "Reserved" ;
+    logical_value, 196, "Reserved" ;
+    logical_value, 197, "Reserved" ;
+    logical_value, 198, "Reserved" ;
+    logical_value, 199, "Reserved" ;
+    logical_value, 200, "Reserved" ;
+    logical_value, 201, "Reserved" ;
+    logical_value, 202, "Reserved" ;
+    logical_value, 203, "Reserved" ;
+    logical_value, 204, "Reserved" ;
+    logical_value, 205, "Reserved" ;
+    logical_value, 206, "Reserved" ;
+    logical_value, 207, "Reserved" ;
+    logical_value, 208, "Reserved" ;
+    logical_value, 209, "Reserved" ;
+    logical_value, 210, "Reserved" ;
+    logical_value, 211, "Reserved" ;
+    logical_value, 212, "Reserved" ;
+    logical_value, 213, "Reserved" ;
+    logical_value, 214, "Reserved" ;
+    logical_value, 215, "Reserved" ;
+    logical_value, 216, "Reserved" ;
+    logical_value, 217, "Reserved" ;
+    logical_value, 218, "Reserved" ;
+    logical_value, 219, "Reserved" ;
+    logical_value, 220, "Reserved" ;
+    logical_value, 221, "Reserved" ;
+    logical_value, 222, "Reserved" ;
+    logical_value, 223, "Reserved" ;
+    logical_value, 224, "Reserved" ;
+    logical_value, 225, "Reserved" ;
+    logical_value, 226, "Reserved" ;
+    logical_value, 227, "Reserved" ;
+    logical_value, 228, "Reserved" ;
+    logical_value, 229, "Reserved" ;
+    logical_value, 230, "Reserved" ;
+    logical_value, 231, " Reserved" ;
+    logical_value, 232, "Reserved" ;
+    logical_value, 233, "Reserved" ;
+    logical_value, 234, "Reserved" ;
+    logical_value, 235, "Reserved" ;
+    logical_value, 236, "Reserved" ;
+    logical_value, 237, "Reserved" ;
+    logical_value, 238, "Reserved" ;
+    logical_value, 239, "Reserved" ;
+    logical_value, 240, "Reserved" ;
+    logical_value, 241, "Reserved" ;
+    logical_value, 242, "Reserved" ;
+    logical_value, 243, "Reserved" ;
+    logical_value, 244, "Reserved" ;
+    logical_value, 245, "Reserved" ;
+    logical_value, 246, "Reserved" ;
+    logical_value, 247, "Reserved" ;
+    logical_value, 248, "Reserved" ;
+    logical_value, 249, "Reserved" ;
+    logical_value, 250, "Reserved" ;
+    logical_value, 251, "Reserved" ;
+    logical_value, 252, "Reserved" ;
+    logical_value, 253, "Reserved" ;
+    logical_value, 254, "Reserved" ;
+    logical_value, 255, "Invalide" ;
+  }
+  TBATT_FAULT_Encoding {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "Not available" ;
+    logical_value, 1, "No fault" ;
+    logical_value, 2, "Reserved" ;
+    logical_value, 3, "Reserved" ;
+    logical_value, 4, "Reserved" ;
+    logical_value, 5, "out of range too low" ;
+    logical_value, 6, "out of range too high" ;
+    logical_value, 7, "unspecified fault" ;
+  }
+  TM_GEAR_POSITION_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Forward range or D" ;
+    logical_value, 1, "Reverse gear or N or P" ;
+  }
+  TYPE_CLIGNOT_TEM_INHIB_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Fix LED" ;
+    logical_value, 1, "Blinking LED" ;
+  }
+  TYPE_DIR_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Invalid" ;
+    logical_value, 1, "Steering right" ;
+    logical_value, 2, "Steering left" ;
+    logical_value, 3, "Invalid" ;
+  }
+  UBATT_Encoding {
+    physical_value, 0, 15000, 0.001, 3, "V" ;
+    logical_value, 16383, "Invalide" ;
+  }
+  UBATT_FAULT_Encoding {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "Not available" ;
+    logical_value, 1, "No fault" ;
+    logical_value, 2, "Reserved" ;
+    logical_value, 3, "Reserved" ;
+    logical_value, 4, "Reserved" ;
+    logical_value, 5, "out of range too low" ;
+    logical_value, 6, "out of range too high" ;
+    logical_value, 7, "unspecified fault" ;
+  }
+  U_PRED_REDEMARRAGE_Encoding {
+    physical_value, 0, 1300, 0.01, 0 ;
+    physical_value, 1301, 2045, 1, 0, "Reserved" ;
+    logical_value, 2046, "Unavailable" ;
+    logical_value, 2047, "Invalid" ;
+  }
+  VALEUR_SOC_ETENDUE_Encoding {
+    physical_value, 0, 1000, 0.1, 0, "%" ;
+    physical_value, 1001, 1021, 1, 0, "Reserved" ;
+    logical_value, 1022, "Unavailable" ;
+    logical_value, 1023, "Invalide" ;
+  }
+  VEHICLE_SPEED_Encoding {
+    physical_value, 0, 65534, 0.01, 0, "kmph" ;
+    physical_value, 65535, 65535, 0.01, 0, "Initial value" ;
+  }
+  VEHICLE_SPEED_VALIDITY_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Invalid" ;
+    logical_value, 1, "Speed information available" ;
+    logical_value, 2, "Speed information unavailable" ;
+    logical_value, 3, "Invalid" ;
+  }
+  WIPER_STATUS_Encoding {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Wiper ON" ;
+    logical_value, 1, "Wiper OFF" ;
+    logical_value, 2, "Wiper Faulty" ;
+    logical_value, 3, "Reserved" ;
+  }
+  CSM_RESPONSE_ERROR_Encoding {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No error on the data field" ;
+    logical_value, 1, "Error on the data field" ;
+  }
+  VALEUR_SOC_Encoding {
+    physical_value, 0, 100, 1, 0, "%" ;
+  }
+}
+
+Signal_representation {
+  ABPI_Encoding: ABPI ;
+  ACT_RBG_PASS_Encoding: ACT_RBG_PASS ;
+  AMBIENT_TEMP_Encoding: AMBIENT_TEMP ;
+  BAT_AH_COUNTER_Encoding: BAT_AH_COUNTER ;
+  BAT_I_MAX_Encoding: BAT_I_MAX ;
+  BAT_I_MAX_LOW_CURRENT_Encoding: BAT_I_MAX_LOW_CURRENT ;
+  BAT_RES_INT_ESTIM_Encoding: BAT_RES_INT_ESTIM ;
+  BAT_RINT_LOW_CUR_Encoding: BAT_RINT_LOW_CUR ;
+  BAT_RINT_LOW_CUR_ST_Encoding: BAT_RINT_LOW_CUR_ST ;
+  BAT_RINT_NORM_Encoding: BAT_RINT_NORM ;
+  BAT_RINT_RIPPLE_Encoding: BAT_RINT_RIPPLE ;
+  BAT_RINT_RIPPLE_ST_Encoding: BAT_RINT_RIPPLE_ST ;
+  BAT_SOH_Encoding_1: BAT_SOH ;
+  BAT_U_MIN_Encoding: BAT_U_MIN ;
+  BAT_U_MIN_LOW_CURRENT_Encoding: BAT_U_MIN_LOW_CURRENT ;
+  CALIBRE_IBATT_Encoding: CALIBRE_IBATT ;
+  CDE_PV_LIN_Encoding: CDE_PV_LIN ;
+  COMPTEUR_TENTATIVE_REVEIL_Encoding: COMPTEUR_TENTATIVE_REVEIL ;
+  CPT_PROCESS_IBS_FRAME_3_Encoding: CPT_PROCESS_IBS_FRAME_3 ;
+  CSM_AUTO_PARK_LOW_BEAM_Encoding: CSM_AUTO_PARK_LOW_BEAM ;
+  CSM_BCM_ECU_MFD_DAY_Encoding: CSM_BCM_ECU_MFD_DAY ;
+  CSM_BCM_ECU_MFD_MONTH_Encoding: CSM_BCM_ECU_MFD_MONTH ;
+  CSM_BCM_ECU_MFD_YEAR_Encoding: CSM_BCM_ECU_MFD_YEAR ;
+  CSM_BCM_SUP_CODE_Encoding: CSM_BCM_SUP_CODE ;
+  CSM_CHKSUM_Encoding: CSM_CHKSUM ;
+  CSM_FOG_FRONT_REAR_STATUS_Encoding: CSM_FOG_FRONT_REAR_STATUS ;
+  CSM_FRONT_WASHER_STATUS_Encoding: CSM_FRONT_WASHER_STATUS ;
+  CSM_FRONT_WIPER_STATUS_Encoding: CSM_FRONT_WIPER_STATUS ;
+  CSM_HIGH_PASS_BEAM_Encoding: CSM_HIGH_PASS_BEAM ;
+  CSM_MCU_Faults_Encoding: CSM_MCU_Faults ;
+  CSM_MIST_STATUS_Encoding: CSM_MIST_STATUS ;
+  CSM_PROCESS_COUNTER_Encoding: CSM_PROCESS_COUNTER ;
+  CSM_REAR_WIPER_WASHER_STATUS_Encoding: CSM_REAR_WIPER_WASHER_STATUS ;
+  CSM_RIGHT_TRIP_SWITCH_Encoding: CSM_RIGHT_TRIP_SWITCH ;
+  CSM_TURN_INDICATOR_LANE_CHANGE_STATUS_Encoding: CSM_TURN_INDICATOR_LANE_CHANGE_STATUS ;
+  DEM_EFFAC_DEF_Encoding: DEM_EFFAC_DEF ;
+  ETAT_JN_Encoding: ETAT_JN ;
+  E_CSM_PARK_LAMP_REQUEST_Encoding: E_CSM_PARK_LAMP_REQUEST ;
+  E_VALEUR_SEUIL_Encoding_1: E_VALEUR_SEUIL ;
+  FPAS_ACTIVATION_STATUS_Encoding: FPAS_ACTIVATION_STATUS ;
+  FPAS_ALARM_LEVEL_Encoding: FPAS_ALARM_LEVEL ;
+  FPAS_CAL_STATUS_Encoding: FPAS_CAL_STATUS ;
+  FPAS_FLM_DETECT_INFO_Encoding: FPAS_FLM_DETECT_INFO ;
+  FPAS_FL_DETECT_INFO_Encoding: FPAS_FL_DETECT_INFO ;
+  FPAS_FRM_DETECT_INFO_Encoding: FPAS_FRM_DETECT_INFO ;
+  FPAS_FR_DETECT_INFO_Encoding: FPAS_FR_DETECT_INFO ;
+  FPAS_OBJECT_DIST_Encoding: FPAS_OBJECT_DIST ;
+  FPAS_RESP_ERROR_Encoding: FPAS_RESP_ERROR ;
+  FPAS_VEH_TYPE_Encoding: FPAS_VEH_TYPE ;
+  FRONT_LEFT_MIDDLE_SENSOR_STATUS_Encoding: FRONT_LEFT_MIDDLE_SENSOR_STATUS ;
+  FRONT_LEFT_SENSOR_STATUS_Encoding: FRONT_LEFT_SENSOR_STATUS ;
+  FRONT_RIGHT_MIDDLE_SENSOR_STATUS_Encoding: FRONT_RIGHT_MIDDLE_SENSOR_STATUS ;
+  FRONT_RIGHT_SENSOR_STATUS_Encoding: FRONT_RIGHT_SENSOR_STATUS ;
+  IBATT_Encoding: IBATT ;
+  IBATT_FAULT_Encoding: IBATT_FAULT ;
+  IBS_GENERIC_FAULT_Encoding: IBS_GENERIC_FAULT ;
+  IHM_INHIB_Encoding: IHM_INHIB ;
+  INFO_COM_OFF_Encoding: INFO_COM_OFF ;
+  INTERD_MEMO_DEF_Encoding: INTERD_MEMO_DEF ;
+  I_VEILLE_MINI_Encoding: I_VEILLE_MINI ;
+  LIN_ERROR_FLAG_Encoding: LIN_ERROR_FLAG ;
+  OUCARD1_CLIG_Encoding: OUCARD1_CLIG ;
+  OUCARD1_Encoding: OUCARD1 ;
+  OUCARD2_CLIG_Encoding: OUCARD2_CLIG ;
+  OUCARD2_Encoding: OUCARD2 ;
+  OUCARG1_CLIG_Encoding: OUCARG1_CLIG ;
+  OUCARG1_Encoding: OUCARG1 ;
+  OUCARG2_CLIG_Encoding: OUCARG2_CLIG ;
+  OUCARG2_Encoding: OUCARG2 ;
+  OUCARM1_CLIG_Encoding: OUCARM1_CLIG ;
+  OUCARM1_Encoding: OUCARM1 ;
+  OUCAVM_CLIG_Encoding: OUCAVM_CLIG ;
+  OUCAVM_Encoding: OUCAVM ;
+  OUCC_CLIG_Encoding: OUCC_CLIG ;
+  OUCC_Encoding: OUCC ;
+  OUCP_CLIG_Encoding: OUCP_CLIG ;
+  OUCP_Encoding: OUCP ;
+  RESP_ERROR_BMF_Encoding: RESP_ERROR_BMF ;
+  SOC_ERROR_Encoding: SOC_ERROR ;
+  SOF_SAFETY_Encoding: SOF_SAFETY ;
+  SOF_SAFETY_ST_Encoding: SOF_SAFETY_ST ;
+  SOH_STATUS_Encoding: SOH_STATUS ;
+  STATUS_SOC_Encoding: STATUS_SOC ;
+  STATUS_TBATT_Encoding: STATUS_TBATT ;
+  TBATT_Encoding: TBATT ;
+  TBATT_FAULT_Encoding: TBATT_FAULT ;
+  TM_GEAR_POSITION_Encoding: TM_GEAR_POSITION ;
+  TYPE_CLIGNOT_TEM_INHIB_Encoding: TYPE_CLIGNOT_TEM_INHIB ;
+  TYPE_DIR_Encoding: TYPE_DIR ;
+  UBATT_Encoding: UBATT ;
+  UBATT_FAULT_Encoding: UBATT_FAULT ;
+  U_PRED_REDEMARRAGE_Encoding: U_PRED_REDEMARRAGE ;
+  VALEUR_SOC_ETENDUE_Encoding: VALEUR_SOC_ETENDUE ;
+  VEHICLE_SPEED_Encoding: VEHICLE_SPEED ;
+  VEHICLE_SPEED_VALIDITY_Encoding: VEHICLE_SPEED_VALIDITY ;
+  WIPER_STATUS_Encoding: WIPER_STATUS ;
+}

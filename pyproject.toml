@@ -1,11 +1,7 @@
-[build-system]
-requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
-name = "canoe-autogen-can"
-version = "1.0.0"
-description = "Auto-generate CANoe configuration artifacts for CAN networks from DBC + Excel inputs."
+name = "canoe-config-autogen"
+version = "0.1.0"
+description = "Auto-generate CANoe configuration artifacts for CAN & LIN networks from DBC/LDF + Excel inputs."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

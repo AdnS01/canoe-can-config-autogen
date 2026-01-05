@@ -11,6 +11,8 @@ class CAN_CANoeConfig:
         self.filePathExcel = ""
         self.output_root = ""
         self.repo_root = Path(__file__).resolve().parents[2]
+        self.find_input_paths()
+        
         self.Signals = {}
         self.Messages = {}
         self.Nodes = []
@@ -20,8 +22,7 @@ class CAN_CANoeConfig:
 
 
     def find_input_paths(self):
-        
-        input_root = self.repo_root / "inputs"
+        input_root = self.repo_root / Path("inputs") / Path("can")
         dbc_files = sorted((input_root / "dbc").glob("*.dbc"))
         excel_files = sorted((input_root / "excel").glob("*.xlsx"))
         if not dbc_files or not excel_files:
@@ -31,8 +32,10 @@ class CAN_CANoeConfig:
         self.filePathDBC = dbc_files[0]
         self.filePathExcel = excel_files[0]
 
-        self.output_root = self.repo_root / Path("outputs") 
+        self.output_root = self.repo_root / Path("outputs") / Path("can")
         self.output_root.mkdir(parents=True, exist_ok=True)
+
+        print("\n[CAN] CANoe Configuration Auto-Generation")
 
 
     # Printing All Messages with their parameters
@@ -238,7 +241,7 @@ class CAN_CANoeConfig:
 
     # Create Environment Variables File Declaration && Environment Variables File Value Descriptions
     def Generate_EnVars(self):
-        print('')
+        print("\n[CAN] Generating Environment Variables")
         envars_root = self.output_root / Path("envars")
         envars_root.mkdir(parents=True, exist_ok=True)
         EnVarDecPath = envars_root / 'EV_Dec.txt'
@@ -268,8 +271,8 @@ class CAN_CANoeConfig:
                         EnVarDec.write('EV_ ENV_' + str(hex(data['id'])) + '_CRC_FAULT : 0 [0|1] "" 0 ' + str(i) + ' DUMMY_NODE_VECTOR0 Vector__XXX; \n')
             # Stop Creating
             EnVarDec.close()
-        print("The Environment Variables File Declaration has been created\n",
-            "File path : ", os.path.abspath(fileName), "\n")
+        print("[CAN] Environment Variables declaration file created")
+
 
 
     # Create Environment Variables File Value Descriptions from Message Signals
@@ -286,25 +289,22 @@ class CAN_CANoeConfig:
                         EnVarValDesc.write(EnVarLine)
             # Stop Creating
             EnVarValDesc.close()
-        print("The Environment Variables File Value Descriptions has been created\n",
-        "File path : ", os.path.abspath(fileName), "\n")
+        print("[CAN] Environment Variables value descriptions created")
 
 
     # Generate the CAPL code without E2E algorithm 
     def Generate_CAPL(self):
-        print('')
         capl_root = self.output_root / Path("capl")
         capl_root.mkdir(parents=True, exist_ok=True)
         # Extract all messages with their parameters
         self.DBCparser()
+        print("\n[CAN] Generating CAPL code")
         # Create CAPL Code File for each virtual node
-        FN = []
         for node in self.Nodes:
             fileName = node + ".can"
             filePath = capl_root / Path(fileName)
             with open(filePath, 'w') as File:
                 # Add file name to a table
-                FN.append(filePath)
                 line = '///////////////////// Code CAPL for : ' + node + r' \\\\\\\\\\\\\\\\\\\\\\' + '\n\n'
                 File.write(line)
                 # Variables {}
@@ -357,27 +357,23 @@ class CAN_CANoeConfig:
                             File.write('}\n\n')
                 # Stop Generating
                 File.close()
-        print("The CAPL Code for CAN protocol has been generated for each virtual node : ")
-        for data in FN:
-            print("File : ", data, "\n", "Path : ", os.path.abspath(data))
+        print("[CAN] CAPL code generated for all virtual CAN nodes")
 
 
 
     # Generate the CAPL code with E2E algorithm
     def Generate_CAPL_E2E(self):
-        print('')
         capl_e2e_root = self.output_root / Path("capl_e2e")
         capl_e2e_root.mkdir(parents=True, exist_ok=True)
         # Extract all messages with their parameters
         self.DBCparser()
+        print("\n[CAN] Generating CAPL code (E2E enabled)")
         # Create CAPL Code File for each virtual node
-        FN = []
         for node in self.Nodes:
             fileName = node + ".can"
             filePath = capl_e2e_root / Path(fileName)
             with open(filePath, 'w') as File:
                 # Add file name to a table
-                FN.append(filePath)
                 File.write('///////////////////// Code CAPL for : ' + node + r' \\\\\\\\\\\\\\\\\\\\\\' + '\n\n')
                 # -----------------------------------------------------------------------------------------------
                 # Variables {}
@@ -596,28 +592,29 @@ class CAN_CANoeConfig:
                                 File.write('}\n\n')
                 # Stop Generating
                 File.close()
-        print("The CAPL Code for CAN protocol has been generated for each virtual node : ")
-        for data in FN:
-            print("File : ", data, "\n", "Path : ", os.path.abspath(data))
+        print("[CAN] CAPL code generated for all virtual CAN nodes")
 
 
 
-    def Generate_XMLcode(self, CANname,  img_1, img_2):
-        xml_root = self.output_root / Path("xml_config")
-        xml_root.mkdir(parents=True, exist_ok=True)
-        img_Path_1 = self.repo_root / Path("inputs") / Path("img") / Path(img_1)
-        img_Path_2 = self.repo_root / Path("inputs") / Path("img") / Path(img_2)
+    def Generate_XVP(self, CANname,  img_1, img_2):
+        xvp_root = self.output_root / Path("xvp_config")
+        xvp_root.mkdir(parents=True, exist_ok=True)
+        img_path = self.repo_root / Path("inputs") / Path("can") / Path("img")
+        img_Path_1 = img_path / Path(img_1)
+        img_Path_2 = img_path / Path(img_2)
+        if not img_Path_1 or not img_Path_2:
+            raise FileNotFoundError(
+                f"Expected img under {img_path}"
+            )
         # Call DB parser
         self.DBCparser()
-        FN = []
-        print('')
+        print("\n[CAN] Generating XML/XVP configuration")
         # For each virtual node
         for node in self.Nodes:
             # Create XSV file
             fileName = node + ".xvp"
-            filePath = xml_root / Path(fileName)
+            filePath = xvp_root / Path(fileName)
             with open(filePath, 'w') as File:
-                FN.append(fileName)
                 # Text shared with all panels : Header
                 File.write('<?xml version="1.0"?>\n')
                 File.write('<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=15.3.89.0, Culture=neutral, PublicKeyToken=null">\n')
@@ -782,6 +779,4 @@ class CAN_CANoeConfig:
                 File.write('</Panel>\n')
                 # Stop Generating
                 File.close()
-        print("The XML Codes for CAN protocol has been generated for each virtual node")
-        for data in FN:
-            print("File : ", data, "\n", "Path : ", os.path.abspath(data))
+        print("[CAN] XML/XVP files generated successfully")
